@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 import React, {Component} from 'react';
 import {
   View,
@@ -7,56 +8,73 @@ import {
   // BackHandler,
   // Alert,
 } from 'react-native';
-
-import {
-  Header,
-  Item,
-  Input,
-  Icon,
-  Text,
-  Container,
-  Footer,
-  FooterTab,
-  // Content,
-  // Button,
-} from 'native-base';
-
+import {Text, Container, Footer, FooterTab} from 'native-base';
+import {FlatGrid} from 'react-native-super-grid';
 import Icons from 'react-native-vector-icons/MaterialIcons';
-import AmbulanceIcon from 'react-native-vector-icons/Fontisto';
-import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
+// import Icons from 'react-native-vector-icons/Fontisto';
+// import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
 import SplashScreen from 'react-native-splash-screen';
 import {TouchableOpacity} from 'react-native-gesture-handler';
+import DoctorIcon from 'react-native-vector-icons/Fontisto';
 
 class Home extends Component {
-  // backAction = () => {
-  //   Alert.alert('Hold on!', 'Are you sure you want to go back?', [
-  //     {
-  //       text: 'Cancel',
-  //       onPress: () => null,
-  //       style: 'cancel',
-  //     },
-  //     {text: 'YES', onPress: () => BackHandler.exitApp()},
-  //   ]);
-  //   return true;
-  // };
-
-  // componentWillUnmount() {
-  //   this.backHandler.remove();
-  // }
-
   componentDidMount() {
     // do stuff while splash screen is shown
     // After having done stuff (such as async tasks) hide the splash screen
     SplashScreen.hide();
-
-    // this.backHandler = BackHandler.addEventListener(
-    //   'hardwareBackPress',
-    //   this.backAction,
-    // );
   }
-
   render() {
     const {navigate} = this.props.navigation;
+    const items = [
+      {
+        name: 'About',
+        code: '#1abc9c',
+        id: 1,
+        nav: 'About',
+        icon: 'info',
+        color: '#24a0ed',
+      },
+      {
+        name: 'OPD',
+        code: '#2ecc71',
+        id: 2,
+        nav: 'Opd',
+        icon: 'doctor',
+        color: '#2AA6B6',
+      },
+      {
+        name: 'Departments',
+        code: '#3498db',
+        id: 3,
+        nav: 'Department',
+        icon: 'ambulance',
+        color: '#2AA6B6',
+      },
+      {
+        name: 'Blood Bank',
+        code: '#9b59b6',
+        id: 4,
+        nav: 'BloodHome',
+        icon: 'blood-drop',
+        color: '#8a0303',
+      },
+      {
+        name: 'Doctors',
+        code: '#1abc9c',
+        id: 5,
+        nav: 'DoctorsDetails',
+        icon: 'doctor',
+        color: '#1A75BB',
+      },
+      {
+        name: 'Gallery',
+        code: '#2ecc71',
+        id: 6,
+        nav: 'Gallery',
+        icon: 'photograph',
+        color: '#78858b',
+      },
+    ];
     return (
       <Container style={styles.container}>
         {/* <ImageBackground
@@ -66,98 +84,40 @@ class Home extends Component {
           <Image
             style={styles.dscImage}
             source={require('../../assets/allied1.jpeg')}
+            // width={'50%'}
           />
         </View>
-        <View style={styles.searchBarView}>
-          {/* <Header searchBar rounded  style={styles.HeaderStyle} translucent> */}
-          <Header searchBar rounded style={styles.HeaderStyle}>
-            <Item>
-              <Input placeholderTextColor="#23527C" placeholder="Search" />
-              <Icon name="search" style={styles.icon} />
-            </Item>
-          </Header>
-        </View>
-        <View style={styles.a}>
-          <View style={styles.cardview}>
-            <View style={styles.touchableOpacityLeft}>
+        <View style={{flex: 4, justifyContent: 'center', marginTop: '5%'}}>
+          <FlatGrid
+            itemDimension={160}
+            items={items}
+            style={styles.gridView}
+            staticDimension={350}
+            fixed
+            spacing={5}
+            renderItem={({item, index}) => (
               <TouchableOpacity
-                onPress={() => navigate('About', {name: 'Jane'})}>
-                <AmbulanceIcon
-                  style={styles.IconStyle1}
-                  name="info"
-                  size={40}
+                style={[styles.itemContainer]}
+                onPress={() => navigate(item.nav, {name: 'Jane'})}>
+                <DoctorIcon
+                  style={styles.icon}
+                  color={item.color}
+                  name={item.icon}
+                  size={35}
                 />
-                <Text style={styles.cardtext}> About </Text>
+                <Text style={styles.itemName}>{item.name}</Text>
               </TouchableOpacity>
-            </View>
-            <View style={styles.touchableOpacityRight}>
-              <TouchableOpacity onPress={() => navigate('Opd', {name: 'Jane'})}>
-                <AmbulanceIcon
-                  style={styles.IconStyle1}
-                  name="doctor"
-                  size={40}
-                />
-                <Text style={styles.cardtext}> OPD </Text>
-              </TouchableOpacity>
-            </View>
-          </View>
-          <View style={styles.cardview}>
-            <View style={styles.touchableOpacityLeft}>
-              <TouchableOpacity
-                onPress={() => navigate('Emergency', {name: 'Jane'})}>
-                <AmbulanceIcon
-                  style={styles.IconStyle1}
-                  name="ambulance"
-                  size={40}
-                />
-                <Text style={styles.cardtext}> Emergency </Text>
-              </TouchableOpacity>
-            </View>
-            <View style={styles.touchableOpacityRight}>
-              <TouchableOpacity
-                onPress={() => navigate('BloodHome', {name: 'Jane'})}>
-                <AmbulanceIcon
-                  style={styles.IconStyle1}
-                  name="blood-drop"
-                  size={40}
-                />
-                <Text style={styles.cardtext}> Blood Bank </Text>
-              </TouchableOpacity>
-            </View>
-          </View>
-          <View style={styles.cardview}>
-            <View style={styles.touchableOpacityLeft}>
-              <TouchableOpacity
-                onPress={() => navigate('DoctorsDetails', {name: 'Jane'})}>
-                <AmbulanceIcon
-                  style={styles.IconStyle1}
-                  name="doctor"
-                  size={40}
-                />
-                <Text style={styles.cardtext}> Doctors </Text>
-              </TouchableOpacity>
-            </View>
-            <View style={styles.touchableOpacityRight}>
-              <TouchableOpacity
-                onPress={() => navigate('Login', {name: 'Jane'})}>
-                <SimpleLineIcons
-                  style={styles.IconStyle1}
-                  name="login"
-                  size={40}
-                />
-                <Text style={styles.cardtext}> Login </Text>
-              </TouchableOpacity>
-            </View>
-          </View>
+            )}
+          />
         </View>
         <View>
           <Footer>
             <FooterTab style={styles.footerTab}>
               <Icons
                 onPress={() => navigate('Call', {name: 'Jane'})}
-                style={styles.callIcon}
                 name="call"
-                size={35}
+                size={30}
+                color="#2AA6B6"
               />
               <Image
                 style={styles.footerImage2}
@@ -171,22 +131,6 @@ class Home extends Component {
               />
             </FooterTab>
           </Footer>
-          {/* <Footer>
-              <FooterTab>
-                <Button>
-                  <Icon name="call" />
-                </Button>
-                <Button>
-                  <Icon name="camera" />
-                </Button>
-                <Button active>
-                  <Icon active name="navigate" />
-                </Button>
-                <Button>
-                  <Icon name="person" />
-                </Button>
-              </FooterTab>
-            </Footer> */}
         </View>
         {/* </ImageBackground> */}
       </Container>
@@ -197,20 +141,77 @@ class Home extends Component {
 export default Home;
 
 const styles = StyleSheet.create({
+  helpIcon: {
+    marginRight: 10,
+  },
+  header: {
+    color: '#000000',
+    // flex: 2,
+    width: '100%',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  icon: {
+    // color: 'blue',
+    alignSelf: 'center',
+    justifyContent: 'center',
+    flexDirection: 'row',
+    // marginBottom: 40,
+  },
+  scrollView: {
+    backgroundColor: 'pink',
+    marginHorizontal: 20,
+    width: '92%',
+    paddingHorizontal: '5%',
+  },
+  text: {
+    fontSize: 22,
+  },
+  title: {
+    color: 'black',
+    // alignItems: 'center',
+    marginLeft: '2%',
+    alignSelf: 'auto',
+    justifyContent: 'center',
+    // backgroundColor: 'black',
+  },
+  gridView: {
+    // marginTop: 10,
+    // flex: 1,
+    // backgroundColor: 'black',
+    // paddingHorizontal: '1%',
+  },
+  itemContainer: {
+    justifyContent: 'center',
+    borderRadius: 5,
+    // padding: 10,
+    height: 110,
+    // backgroundColor: 'black',
+    borderColor: '#2AA6B6',
+    borderWidth: 1,
+    alignItems: 'center',
+    width: '80%',
+    marginHorizontal: '12%',
+  },
+  itemName: {
+    fontSize: 13,
+    color: '#000000',
+    fontWeight: '500',
+    alignSelf: 'center',
+    marginTop: '10%',
+  },
+  itemCode: {
+    fontWeight: '600',
+    fontSize: 12,
+    color: '#000000',
+    alignSelf: 'center',
+  },
   container: {
     flex: 1,
     flexDirection: 'column',
+    alignItems: 'stretch',
     justifyContent: 'center',
     backgroundColor: '#FFFFFF',
-  },
-  IconStyle1: {
-    color: '#2AA6B6',
-    // alignItems: 'center',
-    margin: 11,
-    alignSelf: 'center',
-    justifyContent: 'center',
-
-    // fontSize:15,
   },
   backgroundImage: {
     // flex: 10,
@@ -218,12 +219,6 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
     backgroundColor: 'transparent',
-  },
-  searchtext: {
-    color: '#2AA6B6',
-  },
-  icon: {
-    color: '#23527C',
   },
   footerImage: {
     // flex: 1,
@@ -235,10 +230,6 @@ const styles = StyleSheet.create({
     marginBottom: '2%',
     padding: '1%',
     marginLeft: '5%',
-  },
-  callIcon: {
-    color: '#2AA6B6',
-    alignItems: 'center',
   },
   footerTab: {
     backgroundColor: '#FFFFFF',
@@ -262,66 +253,19 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     marginBottom: '1%',
   },
-  touchableOpacityLeft: {
-    flex: 1,
-    marginBottom: '3%',
-    borderWidth: 1,
-    marginRight: '2%',
-    overflow: 'hidden',
-    borderColor: '#C1C1C1',
-    borderRadius: 10,
-    borderStyle: 'solid',
-    elevation: 1,
-    backgroundColor: 'transparent',
-    alignItems: 'center',
-  },
-  touchableOpacityRight: {
-    flex: 1,
-    width: '50%',
-    // backgroundColor: '#000000',
-    backgroundColor: 'transparent',
-    marginBottom: '3%',
-    borderWidth: 1,
-    marginRight: '2%',
-    padding: '1%',
-    overflow: 'hidden',
-    borderColor: '#C1C1C1',
-    borderRadius: 10,
-    borderStyle: 'solid',
-    elevation: 1,
-    alignItems: 'center',
-  },
-  IconStyle: {
-    height: '35%',
-    width: '60%',
-    marginVertical: '12%',
-    backgroundColor: '#000000',
-    alignItems: 'center',
-    justifyContent: 'center',
-    alignSelf: 'center',
-  },
   imageContainer: {
-    flex: 3,
+    flex: 1,
     // backgroundColor: '#000000',
     alignItems: 'center',
     justifyContent: 'center',
     alignSelf: 'center',
     width: '98%',
-    height: '100%',
+    // height: '50%',
     // paddingTop: 0,
-    marginTop: '7%',
-  },
-  cardtext: {
-    fontSize: 14,
-    // backgroundColor: '#000000',
-    alignItems: 'center',
-    justifyContent: 'center',
-    alignSelf: 'center',
-    marginBottom: '50%',
-    color: '#23527C',
+    marginTop: '8%',
   },
   footer: {
-    flex: 2,
+    flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
     alignSelf: 'center',
@@ -329,56 +273,15 @@ const styles = StyleSheet.create({
     // height: '100%',
     backgroundColor: '#fff',
   },
-  a: {
-    flex: 12,
-    // backgroundColor: '#000000',
-    flexDirection: 'column',
-    paddingTop: '1%',
-  },
-  HeaderStyle: {
-    // flex: 1,
-    backgroundColor: '#FFFFFF',
-    width: '100%',
-    borderColor: '#000000',
-    // marginBottom: '10%',
-    color: '#2AA6B6',
-  },
-  searchBarView: {
-    flex: 2,
-    width: '98%',
-    // alignItems: 'center',
-    alignSelf: 'center',
-    // paddingVertical: '5%',
-    marginVertical: '1%',
-    // height: '10%',
-    // borderRadius: 10,
-    marginBottom: '5%',
-  },
   dscImage: {
     // flex: 2,
     backgroundColor: '#000000',
     alignItems: 'center',
     justifyContent: 'center',
-    width: '100%',
-    height: '100%',
-    paddingTop: 0,
-    marginTop: 0,
-  },
-  searchBar: {
-    flex: 1,
-    width: '95%',
-  },
-  cardview: {
-    flex: 1,
-    justifyContent: 'center',
-    // alignItems: 'center',
-    flexDirection: 'row',
-    marginHorizontal: '18%',
-    // backgroundColor: '#000000',
-    position: 'relative',
-    // top: 0,
-    // bottom: 0,
-    // left: 0,
-    // right: 0,
+    width: '98%',
+    // height: '100%',
+    // paddingTop: 0,
+    // marginTop: 0,
+    // marginHorizontal: 10,
   },
 });

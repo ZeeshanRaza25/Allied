@@ -22,9 +22,10 @@ import React from 'react';
 import Store from './src/store/store';
 import {connect} from 'react-redux';
 import AsyncStorage from '@react-native-community/async-storage';
-import Tips from './src/components/Tips';
 
 import {autoSignIn} from './src/store/middleWires/registeraction';
+import Department from './src/components/department';
+
 const AfterSignin = createStackNavigator({
   Blood: {screen: Blood, navigationOptions: {headerShown: false}},
   BloodMain: {screen: BloodMain, navigationOptions: {headerShown: false}},
@@ -40,7 +41,7 @@ const AfterSignin = createStackNavigator({
 
 const BeforeSignin = createStackNavigator({
   Home: {screen: Home, navigationOptions: {headerShown: false}},
-  Tips: {screen: Tips, navigationOptions: {headerShown: false}},
+  Department: {screen: Department, navigationOptions: {headerShown: false}},
   Icu: {screen: Icu, navigationOptions: {headerShown: false}},
   Opd: {screen: Opd, navigationOptions: {headerShown: false}},
   Emergency: {screen: Emergency, navigationOptions: {headerShown: false}},
