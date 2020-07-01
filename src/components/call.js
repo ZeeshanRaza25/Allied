@@ -17,7 +17,17 @@ export default class Call extends Component {
 
     Linking.openURL(phoneNumber);
   };
+  makeCallAmbulance = () => {
+    let phoneNumber = '';
 
+    if (Platform.OS === 'android') {
+      phoneNumber = 'tel:${1122}';
+    } else {
+      phoneNumber = 'telprompt:${1122}';
+    }
+
+    Linking.openURL(phoneNumber);
+  };
   render() {
     const {navigate} = this.props.navigation;
     return (
@@ -44,15 +54,24 @@ export default class Call extends Component {
               color="#2AA6B6"
               style={styles.icons}
               name="md-call"
-              size={40}
+              size={38}
             />
             <Text style={styles.text}> 041-9210080</Text>
           </TouchableOpacity>
         </View>
-        {/* <View style={styles.itemView}>
-          <FaxIcon color="#2AA6B6" style={styles.icons} name="fax" size={30} />
-          <Text style={styles.text}> 041-9210080</Text>
-        </View> */}
+        <View style={styles.itemView}>
+          <TouchableOpacity
+            style={styles.TouchableOpacityStyle}
+            onPress={this.makeCallAmbulance}>
+            <AmbulanceIcon
+              style={styles.icons1}
+              color="red"
+              name="ambulance"
+              size={25}
+            />
+            <Text style={styles.text}>1122 </Text>
+          </TouchableOpacity>
+        </View>
         <View style={styles.itemView}>
           <TouchableOpacity
             onPress={() => Linking.openURL('mailto:info@pmc.edu.pk')}
@@ -61,9 +80,9 @@ export default class Call extends Component {
               style={styles.icons1}
               color="#2AA6B6"
               name="email"
-              size={35}
+              size={34}
             />
-            <Text style={styles.text}>info@pmc.edu.pk</Text>
+            <Text style={styles.text}> info@pmc.edu.pk</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -82,8 +101,9 @@ const styles = StyleSheet.create({
     height: '100%',
     // borderBottomColor: '#000000',
     // borderBottomWidth: 1,
-    width: '98%',
+    width: '90%',
     alignItems: 'center',
+    justifyContent: 'flex-start',
   },
   header: {
     color: '#000000',
@@ -113,8 +133,10 @@ const styles = StyleSheet.create({
   },
   text: {
     fontWeight: 'bold',
-    marginHorizontal: '9%',
-    alignContent: 'center',
+    marginLeft: '9%',
+    // alignContent: 'center',
+    // alignSelf: 'center',
+    // justifyContent: 'center',
   },
   itemView: {
     alignItems: 'center',
@@ -124,7 +146,7 @@ const styles = StyleSheet.create({
     height: '10%',
     borderBottomColor: '#000000',
     borderBottomWidth: 1,
-    width: '93%',
+    width: '100%',
   },
   card: {
     // flex: 1,

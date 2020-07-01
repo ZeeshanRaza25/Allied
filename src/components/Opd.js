@@ -10,7 +10,7 @@ import {
   Title,
   View,
   Right,
-  Image,
+  // Image,
 } from 'native-base';
 import Icons from 'react-native-vector-icons/MaterialIcons';
 import DoctorIcon from 'react-native-vector-icons/Fontisto';

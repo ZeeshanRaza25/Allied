@@ -14,7 +14,7 @@ import {
   View,
 } from 'native-base';
 
-export default class MedicalUnit1 extends Component {
+export default class Neurology extends Component {
   render() {
     const {navigate} = this.props.navigation;
     return (
@@ -30,7 +30,7 @@ export default class MedicalUnit1 extends Component {
             </TouchableOpacity>
           </Left>
           <Body style={styles.title}>
-            <Title style={styles.title}> Medical Unit I </Title>
+            <Title style={styles.title}> Neurology </Title>
           </Body>
         </Header>
         <ScrollView>

@@ -123,11 +123,13 @@ class Home extends Component {
                 style={styles.footerImage2}
                 source={require('../../assets/footer3.png')}
               />
-              <Image
-                onPress={() => navigate('HealthTips', {name: 'Jane'})}
+              <Icons
+                onPress={() => navigate('Chatbot', {name: 'Jane'})}
                 color="#2AA6B6"
-                style={styles.footerImage3}
-                source={require('../../assets/footer2.png')}
+                // style={styles.footerImage3}
+                name="chat"
+                size={35}
+                // source={require('../../assets/footer2.png')}
               />
             </FooterTab>
           </Footer>

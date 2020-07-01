@@ -14,7 +14,6 @@ import {
 } from 'native-base';
 // import Icons from 'react-native-vector-icons/MaterialIcons';
 import DoctorIcon from 'react-native-vector-icons/Fontisto';
-
 class Department extends Component {
   render() {
     const {navigate} = this.props.navigation;
@@ -24,81 +23,79 @@ class Department extends Component {
         code: '#1abc9c',
         id: 1,
         uri: require('../../assets/dental.jpeg'),
-        staff: [
-          'Prof. Dr. Ahmed Bilal(Head of Medicine)',
-          'Assis.Prof.Dr. Fraz Saeed Qureshi',
-          'Assis.Prof.Dr.Muhammad Owais Fazal',
-          'Assis.Prof.Dr. Ahmad Zeeshan Chughtai',
-          'Assis.Prof.Dr. Yasir Yaqoob',
-          'Assis.Prof.Dr. Hafiz Mughees Ather',
-          'Assis.Prof.Dr. Javed Iqbal',
-          'Assis.Prof.Dr. Ghulam Abbas Tahir',
-        ],
-        facilities:
-          'ICU, 60 beds of High Dependency Unit (HDU), Radiology, Pathology, Cardiology, Gastroenterology, Nephrology, Neurology and Pulmonology.',
+        nav: 'MedicalUnit1',
       },
       {
         name: 'Medical Unit II',
         code: '#2ecc71',
         id: 2,
         uri: require('../../assets/dental.jpeg'),
+        nav: 'MedicalUnitTwo',
       },
       {
         name: 'Medical Unit III',
         code: '#3498db',
         id: 3,
         uri: require('../../assets/dental.jpeg'),
+        nav: 'MedicalUnitThree',
       },
       {
-        name: 'Pediatricv Department',
+        name: 'Pediatric Department',
         code: '#9b59b6',
         id: 4,
         uri: require('../../assets/dental.jpeg'),
+        nav: 'Pediatric',
       },
       {
         name: 'Neurology Department',
         code: '#1abc9c',
         id: 5,
         uri: require('../../assets/dental.jpeg'),
+        nav: 'Neurology',
       },
       {
         name: 'Surgery-Surgical Unit I',
         code: '#2ecc71',
         id: 6,
         uri: require('../../assets/dental.jpeg'),
+        nav: 'SurgicalOne',
       },
       {
         name: 'Surgery-Surgical Unit II',
         code: '#3498db',
         id: 7,
         uri: require('../../assets/dental.jpeg'),
+        nav: 'SurgicalTwo',
       },
       {
         name: 'ENT I',
         code: '#9b59b6',
         id: 8,
         uri: require('../../assets/dental.jpeg'),
+        nav: 'Ent',
       },
       {
         name: 'Plastic Surgery',
         code: '#1abc9c',
         id: 9,
         uri: require('../../assets/dental.jpeg'),
+        nav: 'PlasticSurgery',
       },
       {
         name: 'Ophthalmology',
         code: '#2ecc71',
         id: 10,
         uri: require('../../assets/dental.jpeg'),
+        nav: 'Ophthamology',
       },
       {
         name: 'Gynaecology & Obstetrics Unit',
         code: '#3498db',
         id: 11,
         uri: require('../../assets/dental.jpeg'),
+        nav: 'Gynaecology',
       },
     ];
-
     return (
       <View style={styles.container}>
         <Header transparent style={styles.header}>
@@ -114,38 +111,22 @@ class Department extends Component {
           <Body style={styles.title}>
             <Title style={styles.title}> Departments </Title>
           </Body>
-          {/* <Right>
-            <Icons
-              onPress={() => navigate('OpdHelp', {name: 'Jane'})}
-              style={styles.helpIcon}
-              name="help"
-              size={30}
-            />
-            <Text>Help</Text>
-          </Right> */}
         </Header>
         <FlatGrid
-          itemDimension={130}
+          itemDimension={160}
           items={items}
           style={styles.gridView}
-          // staticDimension={300}
-          // fixed
+          // staticDimension={350}
+          fixed
           spacing={10}
           renderItem={({item, index}) => (
-            <View
-              style={[
-                styles.itemContainer, //, {backgroundColor: item.code}
-              ]}>
+            <TouchableOpacity
+              style={[styles.itemContainer]}
+              onPress={() => navigate(item.nav, {name: 'Jane'})}>
               <DoctorIcon style={styles.icon} name="doctor" size={70} />
-              {/* <Image
-                source={require('../../assets/dental.jpeg')}
-                height={30}
-                width={30}
-              /> */}
-
               <Text style={styles.itemName}>{item.name}</Text>
               {/* <Text style={styles.itemCode}>Room # {item.room}</Text> */}
-            </View>
+            </TouchableOpacity>
           )}
         />
       </View>

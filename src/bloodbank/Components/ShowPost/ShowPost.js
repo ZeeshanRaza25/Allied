@@ -31,7 +31,7 @@ export default function Showpost(props) {
       const result = await axios(
         'https://myserveralliadapp.herokuapp.com/api/v1/users/allUser',
       );
-      console.log('data =', result.data.data.user);
+      // console.log('data =', result.data.data.user);
       setData(result.data.data.user);
     };
     fetchData();
@@ -52,19 +52,21 @@ export default function Showpost(props) {
               <CardItem>
                 <Left>
                   <TouchableOpacity
-                    onPress={() => props.navigation.navigate('PostDetail')}>
+                  // onPress={() => props.navigation.navigate('PostDetail')}
+                  >
                     <Thumbnail source={item.photo} />
                   </TouchableOpacity>
                   <Body>
                     <TouchableOpacity
-                      onPress={() => props.navigation.navigate('PostDetail')}>
+                    // onPress={() => props.navigation.navigate('PostDetail')}
+                    >
                       <Text
-                        onPress={() => props.navigation.navigate('PostDetail')}
+                        // onPress={() => props.navigation.navigate('PostDetail')}
                         style={{color: '#808080'}}>
                         {item.fullName}
                       </Text>
                       <Text
-                        onPress={() => props.navigation.navigate('PostDetail')}
+                        // onPress={() => props.navigation.navigate('PostDetail')}
                         style={{color: '#808080'}}>
                         {item.bloodGroup}
                       </Text>
