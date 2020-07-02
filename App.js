@@ -41,6 +41,7 @@ import PlasticSurgery from './src/components/departments/PlasticSurgery';
 import SurgicalOne from './src/components/departments/Surgical1';
 import SurgicalTwo from './src/components/departments/Surgical2';
 import Chatbot from './src/components/Chatbot';
+import Drawer from './src/components/drawer';
 
 const AfterSignin = createStackNavigator({
   Blood: {screen: Blood, navigationOptions: {headerShown: false}},
@@ -49,6 +50,7 @@ const AfterSignin = createStackNavigator({
     screen: BloodHome,
     navigationOptions: {headerShown: false},
   },
+  Drawer: {screen: Drawer, navigationOptions: {headerShown: false}},
   PostDetail: {
     screen: PostDetail,
     // navigationOptions: { header: null }
@@ -78,7 +80,7 @@ const BeforeSignin = createStackNavigator({
   },
   SurgicalOne: {screen: SurgicalOne, navigationOptions: {headerShown: false}},
   SurgicalTwo: {screen: SurgicalTwo, navigationOptions: {headerShown: false}},
-
+  Drawer: {screen: Drawer, navigationOptions: {headerShown: false}},
   Gallery: {screen: Gallery, navigationOptions: {headerShown: false}},
   Opd: {screen: Opd, navigationOptions: {headerShown: false}},
   Emergency: {screen: Emergency, navigationOptions: {headerShown: false}},

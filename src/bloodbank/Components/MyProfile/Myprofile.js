@@ -1,25 +1,10 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react-native/no-inline-styles */
 import React, {Component} from 'react';
-import {
-  Container,
-  Header,
-  Content,
-  Form,
-  Item,
-  Input,
-  Label,
-  Text,
-  Left,
-  Button,
-  Icon,
-  Body,
-  Title,
-  Right,
-} from 'native-base';
+import {Text} from 'native-base';
 import {Thumbnail} from 'native-base';
-import {DrawerNavigatorItems} from 'react-navigation-drawer';
-import {NavigationActions} from 'react-navigation';
+// import {DrawerNavigatorItems} from 'react-navigation-drawer';
+// import {NavigationActions} from 'react-navigation';
 
 import {View, StyleSheet} from 'react-native';
 import {Colors} from 'react-native/Libraries/NewAppScreen';

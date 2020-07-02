@@ -1,33 +1,6 @@
 import React, {Component} from 'react';
-import {
-  Container,
-  Header,
-  Content,
-  Form,
-  List,
-  Thumbnail,
-  Item,
-  Input,
-  Label,
-  ListItem,
-  Switch,
-  Text,
-  Left,
-  Button,
-  Icon,
-  Body,
-  Title,
-  Right,
-} from 'native-base';
-import {
-  Image,
-  View,
-  TouchableOpacity,
-  Picker,
-  ScrollView,
-  SafeAreaView,
-  StyleSheet,
-} from 'react-native';
+import {List, Thumbnail, ListItem, Text, Left, Body, Right} from 'native-base';
+import {View, ScrollView, SafeAreaView, StyleSheet} from 'react-native';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 import TopHeader from './../../Components/Header/Header';
 export default class Notfication extends Component {
@@ -50,7 +23,7 @@ export default class Notfication extends Component {
                   />
                 </Left>
                 <Body>
-                  <Text>Hishmat Rai</Text>
+                  <Text>Zeeshan Raza</Text>
                   <Text note>
                     Doing what you like will always keep you happy . .
                   </Text>
@@ -72,7 +45,7 @@ export default class Notfication extends Component {
                   />
                 </Left>
                 <Body>
-                  <Text>Hishmat Rai</Text>
+                  <Text>Zeeshan Raza</Text>
                   <Text note>
                     Doing what you like will always keep you happy . .
                   </Text>

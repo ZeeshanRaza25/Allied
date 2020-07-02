@@ -37,9 +37,13 @@ export default class MedicalUnitThree extends Component {
           <View style={styles.view1}>
             <Text style={styles.heading}>Facilities</Text>
             <Text style={styles.listtext}>
-              {'  '} • ICU,60 beds of High Dependency Unit (HDU), Radiology,
-              Pathology, Cardiology, Gastroenterology, Nephrology, Neurology and
-              Pulmonology.
+              {'  '} • 20 bedded dialysis unit providing hemodialysis facilities
+              to more than 100 patients per day, providing upper and lower GI
+              endoscopy and Bronchoscopy facilities for which all the
+              post-graduates are being trained. The unit is also providing
+              training facilities for doctors and paramedics of the Faisalabad
+              division for prevention and management of dengue fever and other
+              infectious diseases.
             </Text>
           </View>
           <View style={styles.view2}>
@@ -47,23 +51,15 @@ export default class MedicalUnitThree extends Component {
             <List style={{width: '85%'}}>
               <ListItem>
                 <Body>
-                  <Text style={{fontSize: 14}}>Dr. Ahmed Bilal</Text>
+                  <Text style={{fontSize: 14}}>Dr. Aamir Husain</Text>
                   <Text note style={{fontSize: 13}}>
-                    Head of Medicine
+                    Head of Department
                   </Text>
                 </Body>
               </ListItem>
               <ListItem>
                 <Body>
-                  <Text style={{fontSize: 14}}>Dr. Fraz Saeed Qureshi</Text>
-                  <Text note style={{fontSize: 13}}>
-                    Assistant Professor
-                  </Text>
-                </Body>
-              </ListItem>
-              <ListItem>
-                <Body>
-                  <Text style={{fontSize: 14}}>Dr. Muhammad Owais Fazal</Text>
+                  <Text style={{fontSize: 14}}>Dr. Muhammad Adrees Shani</Text>
                   <Text note style={{fontSize: 13}}>
                     Assistant Professor
                   </Text>
@@ -71,7 +67,7 @@ export default class MedicalUnitThree extends Component {
               </ListItem>
               <ListItem>
                 <Body>
-                  <Text style={{fontSize: 14}}>Dr. Ahmad Zeeshan Chughtai</Text>
+                  <Text style={{fontSize: 14}}>Dr. Muhammad Aamer</Text>
                   <Text note style={{fontSize: 13}}>
                     Assistant Professor
                   </Text>
@@ -79,7 +75,7 @@ export default class MedicalUnitThree extends Component {
               </ListItem>
               <ListItem>
                 <Body>
-                  <Text style={{fontSize: 14}}>Dr. Javed Iqbal</Text>
+                  <Text style={{fontSize: 14}}>Dr. Rai Arif</Text>
                   <Text note style={{fontSize: 13}}>
                     Assistant Professor
                   </Text>
@@ -87,7 +83,7 @@ export default class MedicalUnitThree extends Component {
               </ListItem>
               <ListItem>
                 <Body>
-                  <Text style={{fontSize: 14}}>Dr. Hafiz Mughees Ather</Text>
+                  <Text style={{fontSize: 14}}>Dr. Salman Shakoor</Text>
                   <Text note style={{fontSize: 13}}>
                     Assistant Professor
                   </Text>
@@ -95,7 +91,7 @@ export default class MedicalUnitThree extends Component {
               </ListItem>
               <ListItem>
                 <Body>
-                  <Text style={{fontSize: 14}}>Dr. Yasir Yaqoob</Text>
+                  <Text style={{fontSize: 14}}>Dr. Maroof Vaince</Text>
                   <Text note style={{fontSize: 13}}>
                     Assistant Professor
                   </Text>

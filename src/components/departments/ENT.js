@@ -37,9 +37,9 @@ export default class Ent extends Component {
           <View style={styles.view1}>
             <Text style={styles.heading}>Facilities</Text>
             <Text style={styles.listtext}>
-              {'  '} • ICU,60 beds of High Dependency Unit (HDU), Radiology,
-              Pathology, Cardiology, Gastroenterology, Nephrology, Neurology and
-              Pulmonology.
+              {'  '} • Rhinoplasty,Endoscopic sinus surgery, Maxillectomy,
+              Laryngectomy and Mastoid surgery in addition to routine ENT
+              procedures
             </Text>
           </View>
           <View style={styles.view2}>
@@ -47,57 +47,59 @@ export default class Ent extends Component {
             <List style={{width: '85%'}}>
               <ListItem>
                 <Body>
-                  <Text style={{fontSize: 14}}>Dr. Ahmed Bilal</Text>
+                  <Text style={{fontSize: 14}}>Dr. Muhammad Saeed</Text>
                   <Text note style={{fontSize: 13}}>
-                    Head of Medicine
+                    Head of Department
                   </Text>
                 </Body>
               </ListItem>
               <ListItem>
                 <Body>
-                  <Text style={{fontSize: 14}}>Dr. Fraz Saeed Qureshi</Text>
+                  <Text style={{fontSize: 14}}>Dr. Babar Rafiq Khan FCPS</Text>
                   <Text note style={{fontSize: 13}}>
-                    Assistant Professor
+                    Associate Professor
                   </Text>
                 </Body>
               </ListItem>
               <ListItem>
                 <Body>
-                  <Text style={{fontSize: 14}}>Dr. Muhammad Owais Fazal</Text>
+                  <Text style={{fontSize: 14}}>Dr. Sajjad Hyder</Text>
                   <Text note style={{fontSize: 13}}>
-                    Assistant Professor
+                    Assistant Professor (FCPS)
                   </Text>
                 </Body>
               </ListItem>
               <ListItem>
                 <Body>
-                  <Text style={{fontSize: 14}}>Dr. Ahmad Zeeshan Chughtai</Text>
+                  <Text style={{fontSize: 14}}>Dr. Aslam Awan</Text>
                   <Text note style={{fontSize: 13}}>
-                    Assistant Professor
+                    DLO (PMO)
                   </Text>
                 </Body>
               </ListItem>
               <ListItem>
                 <Body>
-                  <Text style={{fontSize: 14}}>Dr. Javed Iqbal</Text>
+                  <Text style={{fontSize: 14}}>Dr. Muhammad Taqi</Text>
                   <Text note style={{fontSize: 13}}>
-                    Assistant Professor
+                    DLO (PMO)
                   </Text>
                 </Body>
               </ListItem>
               <ListItem>
                 <Body>
-                  <Text style={{fontSize: 14}}>Dr. Hafiz Mughees Ather</Text>
+                  <Text style={{fontSize: 14}}>Dr. Ihsan Ibrahim</Text>
                   <Text note style={{fontSize: 13}}>
-                    Assistant Professor
+                    Admin Registrar
                   </Text>
                 </Body>
               </ListItem>
               <ListItem>
                 <Body>
-                  <Text style={{fontSize: 14}}>Dr. Yasir Yaqoob</Text>
+                  <Text style={{fontSize: 14}}>
+                    Dr. Syeda Jamila Ali Tirmizey
+                  </Text>
                   <Text note style={{fontSize: 13}}>
-                    Assistant Professor
+                    (PGR)
                   </Text>
                 </Body>
               </ListItem>

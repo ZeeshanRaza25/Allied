@@ -37,9 +37,9 @@ export default class MedicalUnitTwo extends Component {
           <View style={styles.view1}>
             <Text style={styles.heading}>Facilities</Text>
             <Text style={styles.listtext}>
-              {'  '} • ICU,60 beds of High Dependency Unit (HDU), Radiology,
-              Pathology, Cardiology, Gastroenterology, Nephrology, Neurology and
-              Pulmonology.
+              {'  '} • For different medical disorders in Outdoor Clinics and
+              for Indoor admitted patients, diagnostic and therapeutic
+              Endoscopic facilities for GI disorders.
             </Text>
           </View>
           <View style={styles.view2}>
@@ -47,15 +47,15 @@ export default class MedicalUnitTwo extends Component {
             <List style={{width: '85%'}}>
               <ListItem>
                 <Body>
-                  <Text style={{fontSize: 14}}>Dr. Ahmed Bilal</Text>
+                  <Text style={{fontSize: 14}}>Dr. Aamir Shoukat</Text>
                   <Text note style={{fontSize: 13}}>
-                    Head of Medicine
+                    Professor/Head of Medicine Unit II
                   </Text>
                 </Body>
               </ListItem>
               <ListItem>
                 <Body>
-                  <Text style={{fontSize: 14}}>Dr. Fraz Saeed Qureshi</Text>
+                  <Text style={{fontSize: 14}}>Dr. Umair Ahmad</Text>
                   <Text note style={{fontSize: 13}}>
                     Assistant Professor
                   </Text>
@@ -63,7 +63,7 @@ export default class MedicalUnitTwo extends Component {
               </ListItem>
               <ListItem>
                 <Body>
-                  <Text style={{fontSize: 14}}>Dr. Muhammad Owais Fazal</Text>
+                  <Text style={{fontSize: 14}}>Dr. M. Yousaf Ayub</Text>
                   <Text note style={{fontSize: 13}}>
                     Assistant Professor
                   </Text>
@@ -71,7 +71,7 @@ export default class MedicalUnitTwo extends Component {
               </ListItem>
               <ListItem>
                 <Body>
-                  <Text style={{fontSize: 14}}>Dr. Ahmad Zeeshan Chughtai</Text>
+                  <Text style={{fontSize: 14}}>Dr. Muhammad Irfan</Text>
                   <Text note style={{fontSize: 13}}>
                     Assistant Professor
                   </Text>
@@ -79,7 +79,7 @@ export default class MedicalUnitTwo extends Component {
               </ListItem>
               <ListItem>
                 <Body>
-                  <Text style={{fontSize: 14}}>Dr. Javed Iqbal</Text>
+                  <Text style={{fontSize: 14}}>Dr. M. Shahzad Khan</Text>
                   <Text note style={{fontSize: 13}}>
                     Assistant Professor
                   </Text>
@@ -87,17 +87,25 @@ export default class MedicalUnitTwo extends Component {
               </ListItem>
               <ListItem>
                 <Body>
-                  <Text style={{fontSize: 14}}>Dr. Hafiz Mughees Ather</Text>
+                  <Text style={{fontSize: 14}}>Dr. Tamoor Ali</Text>
                   <Text note style={{fontSize: 13}}>
-                    Assistant Professor
+                    Senior Registrar
                   </Text>
                 </Body>
               </ListItem>
               <ListItem>
                 <Body>
-                  <Text style={{fontSize: 14}}>Dr. Yasir Yaqoob</Text>
+                  <Text style={{fontSize: 14}}>Dr. Noor Gul</Text>
                   <Text note style={{fontSize: 13}}>
-                    Assistant Professor
+                    Senior Registrar
+                  </Text>
+                </Body>
+              </ListItem>
+              <ListItem>
+                <Body>
+                  <Text style={{fontSize: 14}}>Dr. Maqsood Ahmad</Text>
+                  <Text note style={{fontSize: 13}}>
+                    Associate Professor
                   </Text>
                 </Body>
               </ListItem>

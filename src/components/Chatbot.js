@@ -61,13 +61,13 @@ class Chatbot extends Component {
       <View style={{flex: 1, backgroundColor: '#fff'}}>
         <Text
           style={{
-            flex: 1,
+            // flex: 1,
             backgroundColor: '#fff',
             fontWeight: 'bold',
             fontSize: 26,
             alignSelf: 'center',
             color: '#03A9F4',
-            paddingTop: 10,
+            paddingTop: 15,
           }}>
           Chatbot
         </Text>

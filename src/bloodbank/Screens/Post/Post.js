@@ -1,29 +1,7 @@
+/* eslint-disable react-native/no-inline-styles */
 import React, {Component} from 'react';
-import {
-  Container,
-  Header,
-  Content,
-  Form,
-  Item,
-  Input,
-  Label,
-  Text,
-  Left,
-  Button,
-  Icon,
-  Body,
-  Title,
-  Right,
-} from 'native-base';
-import {
-  Image,
-  View,
-  TouchableOpacity,
-  Picker,
-  ScrollView,
-  SafeAreaView,
-  StyleSheet,
-} from 'react-native';
+import {Content, Form, Item, Label} from 'native-base';
+import {View, Picker, ScrollView, SafeAreaView, StyleSheet} from 'react-native';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 import TopHeader from './../../Components/Header/Header';
 export default class post extends Component {
@@ -45,7 +23,7 @@ export default class post extends Component {
                   <Picker
                     selectedValue="Hishmat"
                     style={{height: 50, width: '60%'}}
-                    onValueChange={(itemValue, itemIndex) =>
+                    onValueChange={itemValue =>
                       this.setState({language: itemValue})
                     }>
                     <Picker.Item label="A+ Positive" value="A Positive" />
@@ -88,7 +66,7 @@ export default class post extends Component {
                   <Picker
                     selectedValue="Hishmat"
                     style={{height: 50, width: ' 56%'}}
-                    onValueChange={(itemValue, itemIndex) =>
+                    onValueChange={itemValue =>
                       this.setState({language: itemValue})
                     }>
                     <Picker.Item label="1 Units" value="1" />
@@ -107,7 +85,7 @@ export default class post extends Component {
                   <Picker
                     selectedValue="Hishmat"
                     style={{height: 50, width: ' 80%'}}
-                    onValueChange={(itemValue, itemIndex) =>
+                    onValueChange={itemValue =>
                       this.setState({language: itemValue})
                     }>
                     <Picker.Item label=" Urgent" value=" Urgent" />

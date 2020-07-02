@@ -37,9 +37,15 @@ export default class Ophthamology extends Component {
           <View style={styles.view1}>
             <Text style={styles.heading}>Facilities</Text>
             <Text style={styles.listtext}>
-              {'  '} • ICU,60 beds of High Dependency Unit (HDU), Radiology,
-              Pathology, Cardiology, Gastroenterology, Nephrology, Neurology and
-              Pulmonology.
+              {'  '} • Digital Slit-Lamp Microscopy, Auto-Refractometry,
+              Automated Visual Field Perimetry, A-Scan, B-Scan, Keratometery,
+              Corneal topography, Fundus Fluorescein Angiography, Fundus
+              Photography, Yag Laser and Argon Laser, OCT, EOG, ERG, Pattern
+              ERG, multifocal ERG and VEP.Surgical techniques of Phaco-
+              Emulsification and Vitreo-Retinal surgery, Glaucoma surgery,
+              orbital and oculoplastic surgical procedures.A special Low Vision
+              Aids Clinic has been established to help the patients with
+              irreversible visual loss.
             </Text>
           </View>
           <View style={styles.view2}>
@@ -47,57 +53,11 @@ export default class Ophthamology extends Component {
             <List style={{width: '85%'}}>
               <ListItem>
                 <Body>
-                  <Text style={{fontSize: 14}}>Dr. Ahmed Bilal</Text>
-                  <Text note style={{fontSize: 13}}>
-                    Head of Medicine
+                  <Text style={{fontSize: 14}}>
+                    Prof. Dr. Muhammad Nawaz Malik
                   </Text>
-                </Body>
-              </ListItem>
-              <ListItem>
-                <Body>
-                  <Text style={{fontSize: 14}}>Dr. Fraz Saeed Qureshi</Text>
                   <Text note style={{fontSize: 13}}>
-                    Assistant Professor
-                  </Text>
-                </Body>
-              </ListItem>
-              <ListItem>
-                <Body>
-                  <Text style={{fontSize: 14}}>Dr. Muhammad Owais Fazal</Text>
-                  <Text note style={{fontSize: 13}}>
-                    Assistant Professor
-                  </Text>
-                </Body>
-              </ListItem>
-              <ListItem>
-                <Body>
-                  <Text style={{fontSize: 14}}>Dr. Ahmad Zeeshan Chughtai</Text>
-                  <Text note style={{fontSize: 13}}>
-                    Assistant Professor
-                  </Text>
-                </Body>
-              </ListItem>
-              <ListItem>
-                <Body>
-                  <Text style={{fontSize: 14}}>Dr. Javed Iqbal</Text>
-                  <Text note style={{fontSize: 13}}>
-                    Assistant Professor
-                  </Text>
-                </Body>
-              </ListItem>
-              <ListItem>
-                <Body>
-                  <Text style={{fontSize: 14}}>Dr. Hafiz Mughees Ather</Text>
-                  <Text note style={{fontSize: 13}}>
-                    Assistant Professor
-                  </Text>
-                </Body>
-              </ListItem>
-              <ListItem>
-                <Body>
-                  <Text style={{fontSize: 14}}>Dr. Yasir Yaqoob</Text>
-                  <Text note style={{fontSize: 13}}>
-                    Assistant Professor
+                    Head of Department
                   </Text>
                 </Body>
               </ListItem>

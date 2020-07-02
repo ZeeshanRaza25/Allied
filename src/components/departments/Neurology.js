@@ -1,18 +1,6 @@
-/* eslint-disable react-native/no-inline-styles */
 import React, {Component} from 'react';
 import {StyleSheet, ScrollView, TouchableOpacity} from 'react-native';
-import {
-  List,
-  ListItem,
-  Header,
-  Left,
-  Body,
-  Button,
-  Icon,
-  Title,
-  Text,
-  View,
-} from 'native-base';
+import {Header, Left, Body, Button, Icon, Title, Text, View} from 'native-base';
 
 export default class Neurology extends Component {
   render() {
@@ -37,71 +25,13 @@ export default class Neurology extends Component {
           <View style={styles.view1}>
             <Text style={styles.heading}>Facilities</Text>
             <Text style={styles.listtext}>
-              {'  '} • ICU,60 beds of High Dependency Unit (HDU), Radiology,
-              Pathology, Cardiology, Gastroenterology, Nephrology, Neurology and
-              Pulmonology.
+              {'  '} • EEG, EMG & NCS.We examine and treat different
+              neurological diseases and symptoms.Patients are admitted to
+              inpatient care, for example, due to epileptic seizures, symptoms
+              of the central and peripheral nervous system, intense headache,
+              degenerative diseases of the nervous system and disturbances of
+              the cerebral blood circulation.
             </Text>
-          </View>
-          <View style={styles.view2}>
-            <Text style={styles.heading}>Staff</Text>
-            <List style={{width: '85%'}}>
-              <ListItem>
-                <Body>
-                  <Text style={{fontSize: 14}}>Dr. Ahmed Bilal</Text>
-                  <Text note style={{fontSize: 13}}>
-                    Head of Medicine
-                  </Text>
-                </Body>
-              </ListItem>
-              <ListItem>
-                <Body>
-                  <Text style={{fontSize: 14}}>Dr. Fraz Saeed Qureshi</Text>
-                  <Text note style={{fontSize: 13}}>
-                    Assistant Professor
-                  </Text>
-                </Body>
-              </ListItem>
-              <ListItem>
-                <Body>
-                  <Text style={{fontSize: 14}}>Dr. Muhammad Owais Fazal</Text>
-                  <Text note style={{fontSize: 13}}>
-                    Assistant Professor
-                  </Text>
-                </Body>
-              </ListItem>
-              <ListItem>
-                <Body>
-                  <Text style={{fontSize: 14}}>Dr. Ahmad Zeeshan Chughtai</Text>
-                  <Text note style={{fontSize: 13}}>
-                    Assistant Professor
-                  </Text>
-                </Body>
-              </ListItem>
-              <ListItem>
-                <Body>
-                  <Text style={{fontSize: 14}}>Dr. Javed Iqbal</Text>
-                  <Text note style={{fontSize: 13}}>
-                    Assistant Professor
-                  </Text>
-                </Body>
-              </ListItem>
-              <ListItem>
-                <Body>
-                  <Text style={{fontSize: 14}}>Dr. Hafiz Mughees Ather</Text>
-                  <Text note style={{fontSize: 13}}>
-                    Assistant Professor
-                  </Text>
-                </Body>
-              </ListItem>
-              <ListItem>
-                <Body>
-                  <Text style={{fontSize: 14}}>Dr. Yasir Yaqoob</Text>
-                  <Text note style={{fontSize: 13}}>
-                    Assistant Professor
-                  </Text>
-                </Body>
-              </ListItem>
-            </List>
           </View>
         </ScrollView>
       </>

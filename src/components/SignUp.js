@@ -1,16 +1,7 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, {Component} from 'react';
 
-import {
-  Container,
-  Header,
-  Content,
-  Form,
-  Item,
-  Input,
-  Label,
-  Text,
-} from 'native-base';
+import {Content, Form, Item, Input, Label, Text} from 'native-base';
 import {
   Image,
   View,
@@ -23,7 +14,7 @@ import {
 import {signUp} from '../store/middleWires/registeraction';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 import {connect} from 'react-redux';
-import Loading from "./loading"
+import Loading from './loading';
 class SignUpComponent extends Component {
   state = {
     fullName: '',
@@ -31,7 +22,7 @@ class SignUpComponent extends Component {
     password: '',
     phoneNumber: '',
     bloodGroup: '',
-    loading:false
+    loading: false,
   };
 
   onChange = (e, name) => {
@@ -42,17 +33,16 @@ class SignUpComponent extends Component {
   };
 
   onSubmitForm = e => {
-    this.setState({loading:true})
-    this.props.signupFunc({...this.state} , this.afterloading);
-    
+    this.setState({loading: true});
+    this.props.signupFunc({...this.state}, this.afterloading);
   };
 
-  afterloading =()=>{
-    this.setState({loading:false})
-  }
+  afterloading = () => {
+    this.setState({loading: false});
+  };
   onValueChange2(value) {
     this.setState({
-      bloodGroup: value
+      bloodGroup: value,
     });
   }
   render() {
@@ -69,8 +59,9 @@ class SignUpComponent extends Component {
               //   justifyContent: 'center',
               //   alignContent: 'center',
               // alignItems: 'center',
-              backgroundColor: '#eceef3',
+              // backgroundColor: '#fff',
               marginHorizontal: '10%',
+              paddingTop: '5%',
             }}>
             <Text />
             <Image
@@ -86,14 +77,14 @@ class SignUpComponent extends Component {
                   'http://pluspng.com/img-png/blood-donation-png-hd-blood-blood-drop-donation-hand-health-care-medical-transfusion-blood-512.png',
               }}
             />
-            <Text
+            {/* <Text
               style={{
                 alignSelf: 'center',
                 color: '#e42c34',
                 fontWeight: 'bold',
               }}>
               WelCome to Blood Bank
-            </Text>
+            </Text> */}
             <Content style={styles.content}>
               <Form>
                 <Item stackedLabel>
@@ -127,8 +118,7 @@ class SignUpComponent extends Component {
                   <Picker
                     selectedValue={this.state.bloodGroup}
                     style={{height: 50, width: '100%'}}
-                    onValueChange={this.onValueChange2.bind(this)}
-                    >
+                    onValueChange={this.onValueChange2.bind(this)}>
                     <Picker.Item
                       label="A + (Positive)"
                       value="A + (Positive)"
@@ -238,7 +228,7 @@ class SignUpComponent extends Component {
 const mapDispatchToProps = dispatch => {
   return {
     // dispatching plain actions
-    signupFunc: (data , cb) => dispatch(signUp(data , cb)),
+    signupFunc: (data, cb) => dispatch(signUp(data, cb)),
   };
 };
 

@@ -1,28 +1,8 @@
 import React, {Component} from 'react';
+import {List, ListItem, Thumbnail, Text, Left, Body, Right} from 'native-base';
 import {
-  Container,
-  Header,
-  Content,
-  Form,
-  Item,
-  Input,
-  Label,
-  List,
-  ListItem,
-  Thumbnail,
-  Text,
-  Left,
-  Button,
-  Icon,
-  Body,
-  Title,
-  Right,
-} from 'native-base';
-import {
-  Image,
   View,
   TouchableOpacity,
-  Picker,
   ScrollView,
   SafeAreaView,
   StyleSheet,

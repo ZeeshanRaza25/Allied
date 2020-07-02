@@ -11,7 +11,7 @@ import {
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 import Loading from '../../../components/loading';
 import {signIn} from '../../../store/middleWires/registeraction';
-import { connect } from 'react-redux'
+import {connect} from 'react-redux';
 
 class Login extends Component {
   state = {
@@ -30,7 +30,7 @@ class Login extends Component {
     this.setState({loading: true});
     this.props.signinFunc({...this.state}, this.afterCall);
   };
-  afterCall = (success) => {
+  afterCall = success => {
     this.setState({loading: false});
     // if(success){
     //   () => this.props.navigation.navigate('Home')()
@@ -172,6 +172,7 @@ const styles = StyleSheet.create({
     height: '100%',
     // alignItems: 'center',
     // flexDirection: 'column',
+    paddingTop: '8%',
   },
   container: {
     flex: 1,

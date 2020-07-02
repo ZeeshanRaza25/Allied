@@ -17,7 +17,7 @@ import SplashScreen from 'react-native-splash-screen';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import DoctorIcon from 'react-native-vector-icons/Fontisto';
 
-class Home extends Component {
+class BloodHome extends Component {
   componentDidMount() {
     // do stuff while splash screen is shown
     // After having done stuff (such as async tasks) hide the splash screen
@@ -47,7 +47,7 @@ class Home extends Component {
         code: '#3498db',
         id: 3,
         nav: 'Department',
-        icon: 'ambulance',
+        icon: 'columns',
         color: '#2AA6B6',
       },
       {
@@ -83,7 +83,7 @@ class Home extends Component {
         <View style={styles.imageContainer}>
           <Image
             style={styles.dscImage}
-            source={require('../../assets/allied1.jpeg')}
+            source={require('../../assets/allied2.jpeg')}
             // width={'50%'}
           />
         </View>
@@ -140,7 +140,7 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default BloodHome;
 
 const styles = StyleSheet.create({
   helpIcon: {
@@ -280,7 +280,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#000000',
     alignItems: 'center',
     justifyContent: 'center',
-    width: '98%',
+    width: '100%',
+    marginHorizontal: '20%',
     // height: '100%',
     // paddingTop: 0,
     // marginTop: 0,

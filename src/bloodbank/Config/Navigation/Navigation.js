@@ -70,12 +70,12 @@ const MyDrawerNavigator = createDrawerNavigator(
   },
 );
 const AppNavigator = createStackNavigator({
-  Login: {
-    screen: Login,
-    navigationOptions: {headerShown: false},
-  },
   Home: {
     screen: MyDrawerNavigator,
+    navigationOptions: {headerShown: false},
+  },
+  Login: {
+    screen: Login,
     navigationOptions: {headerShown: false},
   },
   Signup: {

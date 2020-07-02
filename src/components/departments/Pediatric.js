@@ -37,9 +37,11 @@ export default class Pediatric extends Component {
           <View style={styles.view1}>
             <Text style={styles.heading}>Facilities</Text>
             <Text style={styles.listtext}>
-              {'  '} • ICU,60 beds of High Dependency Unit (HDU), Radiology,
-              Pathology, Cardiology, Gastroenterology, Nephrology, Neurology and
-              Pulmonology.
+              {'  '} • Pediatric Intensive Care Unit (PICU), Nephrology,
+              Hematology, Gastroenterology, Endocrinology, Malnutrition, &
+              Isolation.It is well equipped with a Central Oxygen Supply,
+              Incubators, Pulse Oximeters, Cardiac Monitors, Ventilators in
+              Neonatal ICU (NICU) & phototherapy units.
             </Text>
           </View>
           <View style={styles.view2}>
@@ -47,57 +49,9 @@ export default class Pediatric extends Component {
             <List style={{width: '85%'}}>
               <ListItem>
                 <Body>
-                  <Text style={{fontSize: 14}}>Dr. Ahmed Bilal</Text>
+                  <Text style={{fontSize: 14}}>Prof. Dr. Hina Ayesha</Text>
                   <Text note style={{fontSize: 13}}>
-                    Head of Medicine
-                  </Text>
-                </Body>
-              </ListItem>
-              <ListItem>
-                <Body>
-                  <Text style={{fontSize: 14}}>Dr. Fraz Saeed Qureshi</Text>
-                  <Text note style={{fontSize: 13}}>
-                    Assistant Professor
-                  </Text>
-                </Body>
-              </ListItem>
-              <ListItem>
-                <Body>
-                  <Text style={{fontSize: 14}}>Dr. Muhammad Owais Fazal</Text>
-                  <Text note style={{fontSize: 13}}>
-                    Assistant Professor
-                  </Text>
-                </Body>
-              </ListItem>
-              <ListItem>
-                <Body>
-                  <Text style={{fontSize: 14}}>Dr. Ahmad Zeeshan Chughtai</Text>
-                  <Text note style={{fontSize: 13}}>
-                    Assistant Professor
-                  </Text>
-                </Body>
-              </ListItem>
-              <ListItem>
-                <Body>
-                  <Text style={{fontSize: 14}}>Dr. Javed Iqbal</Text>
-                  <Text note style={{fontSize: 13}}>
-                    Assistant Professor
-                  </Text>
-                </Body>
-              </ListItem>
-              <ListItem>
-                <Body>
-                  <Text style={{fontSize: 14}}>Dr. Hafiz Mughees Ather</Text>
-                  <Text note style={{fontSize: 13}}>
-                    Assistant Professor
-                  </Text>
-                </Body>
-              </ListItem>
-              <ListItem>
-                <Body>
-                  <Text style={{fontSize: 14}}>Dr. Yasir Yaqoob</Text>
-                  <Text note style={{fontSize: 13}}>
-                    Assistant Professor
+                    Head of Department
                   </Text>
                 </Body>
               </ListItem>

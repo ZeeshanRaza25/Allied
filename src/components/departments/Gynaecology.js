@@ -37,9 +37,15 @@ export default class Gynaecology extends Component {
           <View style={styles.view1}>
             <Text style={styles.heading}>Facilities</Text>
             <Text style={styles.listtext}>
-              {'  '} • ICU,60 beds of High Dependency Unit (HDU), Radiology,
-              Pathology, Cardiology, Gastroenterology, Nephrology, Neurology and
-              Pulmonology.
+              {'  '} • Labour Ward, Admission Room, Stage-I, Eclampsia Room &
+              Recovery.There are three delivery rooms equipped with central O2
+              supply and suction facilities. For fetal surveillance, CTG and
+              ultrasound machines are available.There are four operation
+              theatres with all the facilities of pulse oximetry, central O2 and
+              nitrous supply There are two laparoscopes for diagnostic and
+              operative laparoscopy.There is one hysteroscope and one
+              colposcope.The unit covers emergency and outdoor on alternative
+              days.
             </Text>
           </View>
           <View style={styles.view2}>
@@ -47,15 +53,15 @@ export default class Gynaecology extends Component {
             <List style={{width: '85%'}}>
               <ListItem>
                 <Body>
-                  <Text style={{fontSize: 14}}>Dr. Ahmed Bilal</Text>
+                  <Text style={{fontSize: 14}}>Prof. Dr. Sumera Tahir</Text>
                   <Text note style={{fontSize: 13}}>
-                    Head of Medicine
+                    Head of Department
                   </Text>
                 </Body>
               </ListItem>
               <ListItem>
                 <Body>
-                  <Text style={{fontSize: 14}}>Dr. Fraz Saeed Qureshi</Text>
+                  <Text style={{fontSize: 14}}>Dr. Naureen Javed</Text>
                   <Text note style={{fontSize: 13}}>
                     Assistant Professor
                   </Text>
@@ -63,7 +69,7 @@ export default class Gynaecology extends Component {
               </ListItem>
               <ListItem>
                 <Body>
-                  <Text style={{fontSize: 14}}>Dr. Muhammad Owais Fazal</Text>
+                  <Text style={{fontSize: 14}}>Dr. Saadia Saleem</Text>
                   <Text note style={{fontSize: 13}}>
                     Assistant Professor
                   </Text>
@@ -71,33 +77,9 @@ export default class Gynaecology extends Component {
               </ListItem>
               <ListItem>
                 <Body>
-                  <Text style={{fontSize: 14}}>Dr. Ahmad Zeeshan Chughtai</Text>
+                  <Text style={{fontSize: 14}}>Dr. Shagufta Noor</Text>
                   <Text note style={{fontSize: 13}}>
-                    Assistant Professor
-                  </Text>
-                </Body>
-              </ListItem>
-              <ListItem>
-                <Body>
-                  <Text style={{fontSize: 14}}>Dr. Javed Iqbal</Text>
-                  <Text note style={{fontSize: 13}}>
-                    Assistant Professor
-                  </Text>
-                </Body>
-              </ListItem>
-              <ListItem>
-                <Body>
-                  <Text style={{fontSize: 14}}>Dr. Hafiz Mughees Ather</Text>
-                  <Text note style={{fontSize: 13}}>
-                    Assistant Professor
-                  </Text>
-                </Body>
-              </ListItem>
-              <ListItem>
-                <Body>
-                  <Text style={{fontSize: 14}}>Dr. Yasir Yaqoob</Text>
-                  <Text note style={{fontSize: 13}}>
-                    Assistant Professor
+                    Senior Registrar
                   </Text>
                 </Body>
               </ListItem>
