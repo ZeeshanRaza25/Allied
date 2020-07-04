@@ -9,15 +9,7 @@ import {
   // BackHandler,
   // Alert,
 } from 'react-native';
-import {
-  Text,
-  Container,
-  Footer,
-  FooterTab,
-  CheckBox,
-  ListItem,
-  Body,
-} from 'native-base';
+import {Text, Container, Footer, FooterTab} from 'native-base';
 import {FlatGrid} from 'react-native-super-grid';
 import Icons from 'react-native-vector-icons/MaterialIcons';
 // import Icons from 'react-native-vector-icons/Fontisto';
@@ -26,7 +18,6 @@ import SplashScreen from 'react-native-splash-screen';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import DoctorIcon from 'react-native-vector-icons/Fontisto';
 import {connect} from 'react-redux';
-
 import {changetoDoner} from '../store/middleWires/registeraction';
 
 class BloodHome extends Component {
@@ -38,9 +29,9 @@ class BloodHome extends Component {
     // After having done stuff (such as async tasks) hide the splash screen
     SplashScreen.hide();
   }
-  handlerCheck = item => {
-    this.props.change(!this.props.user.wantToDonate, this.props.user.token);
-  };
+  // handlerCheck = item => {
+  //   this.props.change(!this.props.user.wantToDonate, this.props.user.token);
+  // };
   render() {
     const {navigate} = this.props.navigation;
     console.log(this.props.navigation);
@@ -120,8 +111,8 @@ class BloodHome extends Component {
           />
         </View>
         {/* <View style={{flex: 3, justifyContent: 'center', marginTop: '8%'}}> */}
-        <View style={{flex: 4, justifyContent: 'center', marginTop: '5%'}}>
-          {this.props.user && this.props.user.fullName && (
+        <View style={{flex: 3, justifyContent: 'center', marginTop: '15%'}}>
+          {/* {this.props.user && this.props.user.fullName && (
             <ListItem>
               <CheckBox
                 checked={this.props.user.wantToDonate}
@@ -133,7 +124,7 @@ class BloodHome extends Component {
                 }`}</Text>
               </Body>
             </ListItem>
-          )}
+          )} */}
           <FlatGrid
             itemDimension={170}
             items={items}
@@ -162,7 +153,7 @@ class BloodHome extends Component {
               <Icons
                 onPress={() => navigate('Call', {name: 'Jane'})}
                 name="call"
-                size={30}
+                size={45}
                 color="#2AA6B6"
               />
               <Image
@@ -174,7 +165,7 @@ class BloodHome extends Component {
                 color="#2AA6B6"
                 // style={styles.footerImage3}
                 name="chat"
-                size={35}
+                size={45}
                 // source={require('../../assets/footer2.png')}
               />
             </FooterTab>
@@ -318,12 +309,12 @@ const styles = StyleSheet.create({
     marginBottom: '1%',
   },
   imageContainer: {
-    flex: 2,
+    flex: 1,
     // backgroundColor: '#000000',
     alignItems: 'center',
     justifyContent: 'center',
     alignSelf: 'center',
-    width: '96%',
+    width: '98%',
     // height: '80%',
     // paddingTop: 0,
     marginTop: '8%',
@@ -343,6 +334,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     width: '98%',
+    marginTop: '12%',
     // height: '100%',
     // paddingTop: 0,
     // marginTop: 0,

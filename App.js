@@ -1,6 +1,6 @@
-import {YellowBox} from 'react-native';
-console.ignoredYellowBox = ['Warning: Each', 'Warning: Failed'];
-console.disableYellowBox = true;
+// import {YellowBox} from 'react-native';
+// console.ignoredYellowBox = ['Warning: Each', 'Warning: Failed'];
+// console.disableYellowBox = true;
 
 import {createAppContainer, createSwitchNavigator} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
@@ -23,9 +23,9 @@ import PostDetail from './src/bloodbank/Screens/DetailPost/DetailPost';
 import SignUp from './src/components/SignUp';
 import {Provider} from 'react-redux';
 import {Container} from 'native-base';
-import React, {Profiler} from 'react';
+import React from 'react';
 import Store from './src/store/store';
-import {createDrawerNavigator, DrawerItems} from 'react-navigation-drawer';
+import {createDrawerNavigator} from 'react-navigation-drawer';
 
 // import {connect} from 'react-redux';
 import AsyncStorage from '@react-native-community/async-storage';
@@ -46,6 +46,7 @@ import SurgicalOne from './src/components/departments/Surgical1';
 import SurgicalTwo from './src/components/departments/Surgical2';
 import Chatbot from './src/components/Chatbot';
 import Drawer from './src/components/drawer';
+import MyProfile from './src/bloodbank/Components/MyProfile/Myprofile';
 
 const MyDrawerNavigatorAfterLogin = createDrawerNavigator({
   Home: {
@@ -53,6 +54,9 @@ const MyDrawerNavigatorAfterLogin = createDrawerNavigator({
     navigationOptions: {
       drawerIcon: () => <Ionicons name="md-home" size={24} />,
     },
+  },
+  MyProfile: {
+    screen: MyProfile,
   },
   logout: {screen: Login},
 });

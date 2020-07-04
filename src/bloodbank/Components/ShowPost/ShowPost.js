@@ -12,6 +12,7 @@ import {
   View,
 } from 'native-base';
 import axios from 'axios';
+import Icons from 'react-native-vector-icons/AntDesign';
 
 export default function Showpost(props) {
   const [data, setData] = useState([]);
@@ -19,7 +20,7 @@ export default function Showpost(props) {
   useEffect(() => {
     const fetchData = async () => {
       const result = await axios(
-        'mongodb+srv://Mujahid:Mujahid_1@cluster0-tbovr.mongodb.net/social-network',
+        'https://myserveralliadapp.herokuapp.com/api/v1/users/allUser',
       );
       // console.log('data =', result.data.data.user);
       setData(result.data.data.user);
@@ -38,7 +39,7 @@ export default function Showpost(props) {
                   <TouchableOpacity
                   // onPress={() => props.navigation.navigate('PostDetail')}
                   >
-                    <Thumbnail source={item.photo} />
+                    <Icons name="user" size={50} style={{marginTop: '15%'}} />
                   </TouchableOpacity>
                   <Body>
                     <TouchableOpacity

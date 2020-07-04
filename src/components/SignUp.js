@@ -37,11 +37,10 @@ class SignUpComponent extends Component {
     this.props.signupFunc({...this.state}, this.afterloading);
   };
 
-  afterloading = () => {
+  afterloading = success => {
     this.setState({loading: false});
-    if(success){
-    this.props.navigation.navigate('App')
-
+    if (success) {
+      this.props.navigation.navigate('App');
     }
   };
   onValueChange2(value) {
