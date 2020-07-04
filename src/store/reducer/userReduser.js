@@ -17,7 +17,26 @@ export default function(state = { auth: { success: false } }, action) {
                     fullName: action.payload.fullName || false,
                     bloodGroup: action.payload.bloodGroup || false,
                     email: action.payload.email || false,
+                    wantToDonate: action.payload.wantToDonate || false,
+                    token: action.payload.token || false
                 },
+            };
+        case "update":
+            return {
+                ...state,
+                auth: {
+                    ...state.auth,
+                    phoneNumber: action.payload.phoneNumber || false,
+                    fullName: action.payload.fullName || false,
+                    bloodGroup: action.payload.bloodGroup || false,
+                    email: action.payload.email || false,
+                    wantToDonate: action.payload.wantToDonate || false,
+                },
+            };
+        case 'SignOut':
+            return {
+                ...state,
+                auth: {},
             };
         default:
             return state;

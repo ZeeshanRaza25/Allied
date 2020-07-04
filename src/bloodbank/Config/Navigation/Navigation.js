@@ -1,7 +1,7 @@
 import React from 'react';
 import Login from './../../Screens/Login/Login';
 import Signup from './../../Screens/Signup/Signup';
-import Home from './../../Screens/Home/Home';
+import Myhome from './../../Screens/Home/Home';
 import {createAppContainer} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
 
@@ -18,7 +18,7 @@ import PostDetail from '../../Screens/DetailPost/DetailPost';
 const MyDrawerNavigator = createDrawerNavigator(
   {
     Home: {
-      screen: Home,
+      screen: Myhome,
       navigationOptions: {
         drawerIcon: () => <Ionicons name="md-home" size={24} />,
       },
@@ -49,24 +49,6 @@ const MyDrawerNavigator = createDrawerNavigator(
         drawerIcon: () => <Ionicons name="md-settings" size={24} />,
       },
     },
-  },
-  {
-    contentComponent: props => (
-      // eslint-disable-next-line react-native/no-inline-styles
-      <View style={{flex: 1}}>
-        <View>
-          <Profile {...props} />
-        </View>
-        <Text />
-        <Text />
-        <Text />
-        <Text />
-        <Text />
-        <Text />
-        <Text />
-        <DrawerItems {...props} />
-      </View>
-    ),
   },
 );
 const AppNavigator = createStackNavigator({

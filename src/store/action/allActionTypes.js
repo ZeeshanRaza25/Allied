@@ -26,6 +26,18 @@ export class RegisterAction {
             payload: data
         }
     }
+    static change(data) {
+        return {
+            type: "update",
+            payload: data
+        }
+    }
+    static logout(data) {
+        return {
+            type: "SignOut",
+
+        }
+    }
     static loginUser(data) {
         return {
             type: SIGN_IN,
