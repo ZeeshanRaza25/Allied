@@ -237,7 +237,7 @@ export default class About extends Component {
               style={styles.contactView}
               onPress={() =>
                 Linking.openURL(
-                  'https://www.facebook.com/Allied-Hospital-Faisalabad-205247986174969/up',
+                  'https://www.facebook.com/Allied-Hospital-Faisalabad-205247986174969',
                 )
               }>
               <Icons style={styles.IconStyle} name="facebook" size={25} />

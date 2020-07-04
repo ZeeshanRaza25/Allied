@@ -87,14 +87,14 @@ class BloodHome extends Component {
             // width={'50%'}
           />
         </View>
-        <View style={{flex: 4, justifyContent: 'center', marginTop: '5%'}}>
+        <View style={{flex: 3, justifyContent: 'center', marginTop: '8%'}}>
           <FlatGrid
-            itemDimension={160}
+            itemDimension={170}
             items={items}
             style={styles.gridView}
-            staticDimension={350}
+            staticDimension={370}
             fixed
-            spacing={5}
+            spacing={8}
             renderItem={({item, index}) => (
               <TouchableOpacity
                 style={[styles.itemContainer]}
@@ -261,8 +261,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     alignSelf: 'center',
-    width: '98%',
-    // height: '50%',
+    width: '96%',
+    // height: '80%',
     // paddingTop: 0,
     marginTop: '8%',
   },
@@ -276,12 +276,11 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   dscImage: {
-    // flex: 2,
+    flex: 1,
     backgroundColor: '#000000',
     alignItems: 'center',
     justifyContent: 'center',
-    width: '100%',
-    marginHorizontal: '20%',
+    width: '98%',
     // height: '100%',
     // paddingTop: 0,
     // marginTop: 0,

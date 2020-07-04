@@ -19,7 +19,7 @@ export default function Showpost(props) {
   useEffect(() => {
     const fetchData = async () => {
       const result = await axios(
-        'https://myserveralliadapp.herokuapp.com/api/v1/users/allUser',
+        'mongodb+srv://Mujahid:Mujahid_1@cluster0-tbovr.mongodb.net/social-network',
       );
       // console.log('data =', result.data.data.user);
       setData(result.data.data.user);

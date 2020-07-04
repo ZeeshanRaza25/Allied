@@ -1,19 +1,8 @@
 import React, {Component} from 'react';
-import {StyleSheet, TouchableOpacity, Text} from 'react-native';
+import {StyleSheet, TouchableOpacity, Text, Image} from 'react-native';
 import {FlatGrid} from 'react-native-super-grid';
-import {
-  Header,
-  Left,
-  Body,
-  Button,
-  Icon,
-  Title,
-  View,
-  //   Right,
-  //   Image,
-} from 'native-base';
+import {Header, Left, Body, Button, Icon, Title, View} from 'native-base';
 // import Icons from 'react-native-vector-icons/MaterialIcons';
-import DoctorIcon from 'react-native-vector-icons/Fontisto';
 class Department extends Component {
   render() {
     const {navigate} = this.props.navigation;
@@ -22,77 +11,88 @@ class Department extends Component {
         name: 'Medical Unit I',
         code: '#1abc9c',
         id: 1,
-        uri: require('../../assets/dental.jpeg'),
+        uri:
+          'https://cdn1.iconfinder.com/data/icons/medical-health-care-flat/33/cardiology-128.png',
         nav: 'MedicalUnit1',
       },
       {
         name: 'Medical Unit II',
         code: '#2ecc71',
         id: 2,
-        uri: require('../../assets/dental.jpeg'),
+        uri:
+          'https://cdn1.iconfinder.com/data/icons/disability-malibu-vol-2/128/therapist-128.png',
         nav: 'MedicalUnitTwo',
       },
       {
         name: 'Medical Unit III',
         code: '#3498db',
         id: 3,
-        uri: require('../../assets/dental.jpeg'),
+        uri:
+          'https://cdn4.iconfinder.com/data/icons/miscellaneous-43-color-shadow/128/dialysis_kidney_hemodialysis_medical_treatment_disease_purification_-128.png',
         nav: 'MedicalUnitThree',
       },
       {
         name: 'Pediatric Department',
         code: '#9b59b6',
         id: 4,
-        uri: require('../../assets/dental.jpeg'),
+        uri:
+          'https://cdn3.iconfinder.com/data/icons/health-care-and-medical-3/64/1-15-128.png',
         nav: 'Pediatric',
       },
       {
         name: 'Neurology Department',
         code: '#1abc9c',
         id: 5,
-        uri: require('../../assets/dental.jpeg'),
+        uri:
+          'https://cdn1.iconfinder.com/data/icons/human-resources-2-5/128/193-128.png',
         nav: 'Neurology',
       },
       {
         name: 'Surgery-Surgical Unit I',
         code: '#2ecc71',
         id: 6,
-        uri: require('../../assets/dental.jpeg'),
+        uri:
+          'https://cdn0.iconfinder.com/data/icons/popicon-medical-vol-2/256/39-128.png',
         nav: 'SurgicalOne',
       },
       {
         name: 'Surgery-Surgical Unit II',
         code: '#3498db',
         id: 7,
-        uri: require('../../assets/dental.jpeg'),
+        uri:
+          'https://cdn2.iconfinder.com/data/icons/miscellaneous-50-mix/168/hernia_inguinal_stomach_diverticulitis_digestive_body-128.png',
         nav: 'SurgicalTwo',
       },
       {
         name: 'ENT I',
         code: '#9b59b6',
         id: 8,
-        uri: require('../../assets/dental.jpeg'),
+        uri:
+          'https://cdn2.iconfinder.com/data/icons/medical-equipment-3/614/249_-_ENT-128.png',
         nav: 'Ent',
       },
       {
         name: 'Plastic Surgery',
         code: '#1abc9c',
         id: 9,
-        uri: require('../../assets/dental.jpeg'),
+        uri:
+          'https://cdn2.iconfinder.com/data/icons/cosmetic-surgery-5/128/plastic_surgery_cosmetic_face_beauty_woman-128.png',
         nav: 'PlasticSurgery',
       },
       {
         name: 'Ophthalmology',
         code: '#2ecc71',
         id: 10,
-        uri: require('../../assets/dental.jpeg'),
+        uri:
+          'https://cdn0.iconfinder.com/data/icons/human-body-flat/340/body_human_internal_organ_medical_eye_optical_eyeball-128.png',
         nav: 'Ophthamology',
       },
       {
         name: 'Gynaecology & Obstetrics Unit',
         code: '#3498db',
         id: 11,
-        uri: require('../../assets/dental.jpeg'),
+        uri:
+          'https://cdn1.iconfinder.com/data/icons/gynecology-4/64/Mammal-mother-gynaecology-pregnancy-baby-128.png',
         nav: 'Gynaecology',
       },
     ];
@@ -123,7 +123,7 @@ class Department extends Component {
             <TouchableOpacity
               style={[styles.itemContainer]}
               onPress={() => navigate(item.nav, {name: 'Jane'})}>
-              <DoctorIcon style={styles.icon} name="doctor" size={70} />
+              <Image source={{uri: item.uri}} style={styles.icon} />
               <Text style={styles.itemName}>{item.name}</Text>
               {/* <Text style={styles.itemCode}>Room # {item.room}</Text> */}
             </TouchableOpacity>
@@ -162,7 +162,9 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     justifyContent: 'center',
     flexDirection: 'row',
-    marginBottom: 40,
+    marginBottom: 35,
+    width: 70,
+    height: 70,
   },
   scrollView: {
     backgroundColor: 'pink',

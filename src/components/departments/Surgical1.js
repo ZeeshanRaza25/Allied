@@ -23,7 +23,7 @@ export default class SurgicalOne extends Component {
             <TouchableOpacity>
               <Button
                 transparent
-                onPress={() => navigate('Home', {name: 'Jane'})}>
+                onPress={() => navigate('Department', {name: 'Jane'})}>
                 <Icon name="arrow-back" style={styles.icon} />
               </Button>
             </TouchableOpacity>

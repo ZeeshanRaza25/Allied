@@ -1,15 +1,6 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, {Component} from 'react';
-import {
-  Container,
-  Header,
-  Content,
-  Form,
-  Item,
-  Input,
-  Label,
-  Text,
-} from 'native-base';
+import {Content, Form, Item, Input, Label, Text} from 'native-base';
 import {
   Image,
   View,
@@ -19,27 +10,27 @@ import {
   SafeAreaView,
   StyleSheet,
 } from 'react-native';
- 
+
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 export default class StackedLabelExample extends Component {
-  state={
-    fullName:"",
-    email:"",
-    password:"",
-    bloodGroup:""
-  }
+  state = {
+    fullName: '',
+    email: '',
+    password: '',
+    bloodGroup: '',
+  };
 
-   onChange = (e)=>{
-    const {value , name } = e.target
-    console.log(value , name)
+  onChange = e => {
+    const {value, name} = e.target;
+    console.log(value, name);
     this.setState({
-      [name]:value
-    })
-  }
-  
-  onSubmitForm =(e)=>{
-    console.log(this.state)
-  }
+      [name]: value,
+    });
+  };
+
+  onSubmitForm = e => {
+    console.log(this.state);
+  };
 
   render() {
     return (
@@ -63,8 +54,8 @@ export default class StackedLabelExample extends Component {
                     'http://pluspng.com/img-png/blood-donation-png-hd-blood-blood-drop-donation-hand-health-care-medical-transfusion-blood-512.png',
                 }}
               />
-              <Text  style={{color: '#e42c34', fontWeight: 'bold'}}>
-                WelCome to Blood Bank 
+              <Text style={{color: '#e42c34', fontWeight: 'bold'}}>
+                WelCome to Blood Bank
               </Text>
               <Content>
                 <Form>
@@ -72,7 +63,11 @@ export default class StackedLabelExample extends Component {
                     <Label style={{color: '#e42c34', fontWeight: 'bold'}}>
                       Full Name
                     </Label>
-                    <Input onValueChange={this.onChange} name="fullName" placeholder="H****** R**" />
+                    <Input
+                      onValueChange={this.onChange}
+                      name="fullName"
+                      placeholder="H****** R**"
+                    />
                   </Item>
                   <Item stackedLabel>
                     <Label style={{color: '#e42c34', fontWeight: 'bold'}}>
@@ -81,7 +76,8 @@ export default class StackedLabelExample extends Component {
                     <Input
                       keyboardType="numeric"
                       type="number"
-                      onValueChange={this.onChange} name="phoneNumber"
+                      onValueChange={this.onChange}
+                      name="phoneNumber"
                       placeholder="03** *******"
                     />
                   </Item>
@@ -137,8 +133,7 @@ export default class StackedLabelExample extends Component {
                       autoCapitalize="none"
                       autoCorrect={false}
                       name="email"
-                      onValueChange={this.onChange} name="email"
-                
+                      onValueChange={this.onChange}
                       placeholder="xyz@gmail.com"
                     />
                   </Item>
@@ -146,8 +141,13 @@ export default class StackedLabelExample extends Component {
                     <Label style={{color: '#e42c34', fontWeight: 'bold'}}>
                       Password
                     </Label>
-                     
-                    <Input  onValueChange={this.onChange} name="password" secureTextEntry={true} placeholder="**********" />
+
+                    <Input
+                      onValueChange={this.onChange}
+                      name="password"
+                      secureTextEntry={true}
+                      placeholder="**********"
+                    />
                   </Item>
                   <Text />
                   <View style={{textAlign: 'center'}}>

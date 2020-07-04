@@ -12,7 +12,7 @@ export default class PlasticSurgery extends Component {
             <TouchableOpacity>
               <Button
                 transparent
-                onPress={() => navigate('Home', {name: 'Jane'})}>
+                onPress={() => navigate('Department', {name: 'Jane'})}>
                 <Icon name="arrow-back" style={styles.icon} />
               </Button>
             </TouchableOpacity>
@@ -25,7 +25,7 @@ export default class PlasticSurgery extends Component {
           <View style={styles.view1}>
             <Text style={styles.heading}>Facilities</Text>
             <Text style={styles.listtext}>
-              {'  '} • deals the burn cases through resuscitation, wound care,
+              {'  '} • Deals the burn cases through resuscitation, wound care,
               reconstruction and rehabilitation phases, congenital, post
               ablative, post traumatic,post burn and various other soft tissue
               and bony defects, maxillofacial surgery, micro vascular surgery.

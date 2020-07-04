@@ -21,9 +21,6 @@ export default class BloodHome extends Component {
             <ImageSlider />
             {/* <Profile /> */}
             <ShowPost navigation={this.props.navigation} />
-            <ShowPost navigation={this.props.navigation} />
-            <ShowPost navigation={this.props.navigation} />
-            <ShowPost navigation={this.props.navigation} />
           </View>
         </ScrollView>
       </SafeAreaView>
