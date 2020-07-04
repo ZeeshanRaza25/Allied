@@ -39,6 +39,10 @@ class SignUpComponent extends Component {
 
   afterloading = () => {
     this.setState({loading: false});
+    if(success){
+    this.props.navigation.navigate('App')
+
+    }
   };
   onValueChange2(value) {
     this.setState({

@@ -12,6 +12,7 @@ import {Colors} from 'react-native/Libraries/NewAppScreen';
 import Loading from '../../../components/loading';
 import {signIn} from '../../../store/middleWires/registeraction';
 import {connect} from 'react-redux';
+import AsyncStorage from '@react-native-community/async-storage';
 
 class Login extends Component {
   state = {
@@ -19,12 +20,23 @@ class Login extends Component {
     password: '',
     loading: false,
   };
+  _signOutAsync = async () => {
+    console.log("I am singa g")
+    await AsyncStorage.clear();
+    this.props.signOut();
+    this.props.navigation.navigate('Login')
 
+  };
+  
   onChange = (e, name) => {
     this.setState({
       [name]: e,
     });
   };
+  async componentDidMount(){
+    await this._signOutAsync()
+    
+  }
 
   onSumbit = e => {
     this.setState({loading: true});
@@ -32,9 +44,10 @@ class Login extends Component {
   };
   afterCall = success => {
     this.setState({loading: false});
-    // if(success){
-    //   () => this.props.navigation.navigate('Home')()
-    // }
+    if(success){
+      console.log("this is scusflasj");
+    this.props.navigation.navigate('App')
+    }
   };
   render() {
     return (
@@ -155,6 +168,7 @@ const mapDispatchToProps = dispatch => {
   return {
     // dispatching plain actions
     signinFunc: (data, cb) => dispatch(signIn(data, cb)),
+    signOut:()=> dispatch({type:"SignOut"})
   };
 };
 
